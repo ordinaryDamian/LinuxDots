@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #echo "Installing yay (yet another yogurt) AUR helper."
-xecho "What is AUR ? : https://itsfoss.com/aur-arch-linux/ "
+#echo "What is AUR ? : https://itsfoss.com/aur-arch-linux/ "
 #sleep 5
 
 sudo pacman -S git base-devel --noconfirm
