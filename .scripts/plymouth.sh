@@ -2,14 +2,12 @@
 # https://www.debugpoint.com/install-plymouth-arch-linux/
 # open the /etc/mkinitcpio.conf and add the plymouth at the end of the HOOKS parameter
 # open the /etc/default/grub append the quiet splash under parameter GRUB_CMDLINE_LINUX_DEFAULT
+# Check out how the theme looks like: https://github.com/adi1090x/plymouth-themes
+# You san also check out the themes available in AUR: https://aur.archlinux.org/packages?O=0&K=adi1090x&SeB=nd&SB=p
 
 sudo pacman -S plymouth --noconfirm
 
-echo "Now you will install plymouth themes"
-echo "Check out how the theme looks like: https://github.com/adi1090x/plymouth-themes"
-echo "You can also check out the themes available in AUR: https://aur.archlinux.org/packages?O=0&K=adi1090x&SeB=nd&SB=p"
-echo "After you have found the theme you want check out the AUR and write exactly the name of the theme you want to install"
-echo "For example: plymouth-theme-arch-space-git"
+echo "For example: plymouth-theme-glitch-git"
 read -p  "what plymouth theme you want to install? " theme
 
 yay -S plymouth-theme-$theme-git
