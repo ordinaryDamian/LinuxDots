@@ -1,0 +1,7 @@
+themes:
+graphite dark
+Icon theme: 
+tela
+Cursor theme:
+graphite
+bibata
