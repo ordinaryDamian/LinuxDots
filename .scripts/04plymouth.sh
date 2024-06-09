@@ -5,13 +5,13 @@
 # Check out how the theme looks like: https://github.com/adi1090x/plymouth-themes
 # You san also check out the themes available in AUR: https://aur.archlinux.org/packages?O=0&K=adi1090x&SeB=nd&SB=p
 
-sudo pacman -S plymouth --noconfirm
+sudo pacman -S plymouth --noconfirm --needed
 
 echo "For example: plymouth-theme-glitch-git"
 read -p  "what plymouth theme you want to install? " theme
 
 yay -S plymouth-theme-$theme-git
-# yay -S plymouth-theme-glitch-git 
+# yay -S plymouth-theme-glitch-git
 # packages needed - plymouth, plymouth-x11, plymouth-plugin-script(fedora)
 
 # after downloading or cloning themes, copy the selected theme in plymouth theme dir
