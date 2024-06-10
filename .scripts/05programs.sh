@@ -7,17 +7,14 @@
 sudo pacman -Syyu --noconfirm
 
 echo "Installing Xorg and graphics drivers"
-sudo pacman -S xorg-server --noconfirm --needed
-sudo pacman -S xorg-apps --noconfirm --needed
+sudo pacman -S xorg-server xorg-apps xorg-xinit--noconfirm xorg-xman --needed
 sudo pacman -S virtualbox-host-modules-arch virtualbox-guest-utils mesa --noconfirm --needed
+sudo pacman -S xdg-utils iwd --noconfirm --needed
 sudo pacman -S xdg-user-dirs --noconfirm --needed
 xdg-user-dirs-update
-sudo pacman -S xorg-xinit xdg-utils --noconfirm --needed
-sudo pacman -S xorg-xman iwd --noconfirm --needed
 
-echo "Installing system tools"
 # TODO: gxkb keyboard switcher
-sudo pacman -S curl zip unzip mlocate eza wget openssl openssh git net-tools tldr trash-cli tar cmake --noconfirm --needed
+sudo pacman -S curl zip unzip mlocate eza wget openssl openssh git net-tools tldr trash-cli tar cmake bash-completion --noconfirm --needed
 sudo pacman -S man cowsay btop cmatrix ripgrep fd npm python hwinfo usbutils smartmontools flatpak bat --noconfirm --needed
 sudo pacman -S coreutils less findutils diffutils grep sed gawk util-linux procps-ng binutils findutils file --noconfirm --needed
 #sudo pacman -S wireless_tools wpa_supplicant --noconfirm
@@ -26,12 +23,10 @@ sudo pacman -S coreutils less findutils diffutils grep sed gawk util-linux procp
 #sudo pacman -S cups cups-pdf print-manager --noconfirm
 #sudo systemctl enable cups.socket
 
-echo "Installing networking tools"
 sudo pacman -S avahi networkmanager network-manager-applet ufw --noconfirm --needed
 
-echo "Installing applications"
 # pulseaudio-bluetooth
-sudo pacman -S thunderbird ark vlc notepadqq arandr ntfs-3g pulseaudio pulseaudio-alsa yt-dlp noto-fonts-emoji --noconfirm --needed
+sudo pacman -S thunderbird ark vlc notepadqq arandr ntfs-3g yt-dlp noto-fonts-emoji --noconfirm --needed
 
 echo "Installing office package"
 sudo pacman -S libreoffice-fresh-en-gb libreoffice-extension-texmaths libreoffice-extension-writer2latex --noconfirm --needed
