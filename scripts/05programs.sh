@@ -14,25 +14,22 @@ sudo pacman -Syyu --noconfirm
 #xdg-user-dirs-update
 # sudo systemctl enable vmtoolsd
 
-sudo pacman -S curl zip unzip mlocate eza wget openssl openssh git net-tools tldr trash-cli tar cmake bash-completion xz --noconfirm 
-sudo pacman -S man cowsay btop cmatrix ripgrep fd npm python hwinfo usbutils smartmontools flatpak bat bzip2 bzip3 gzip unarchiver --noconfirm 
-sudo pacman -S coreutils less findutils diffutils grep sed gawk util-linux procps-ng binutils findutils file acpi unrar ncompress --noconfirm 
-yay -S 7-zip-full --noconfirm --needed
+sudo pacman -S curl zip unzip mlocate eza wget pkgfile openssl openssh git net-tools tldr trash-cli tar cmake bash-completion xz  --noconfirm 
+sudo pacman -S man cowsay btop cmatrix ripgrep fd npm python hwinfo usbutils smartmontools flatpak bat bzip2 bzip3 gzip unarchiver cpupower --noconfirm 
+sudo pacman -S coreutils less findutils diffutils grep sed gawk util-linux procps-ng binutils findutils file acpi unrar ncompress ffmpegthumbnailer --noconfirm 
 #sudo pacman -S wireless_tools wpa_supplicant --noconfirm
 
 #echo "Installing Printer suuport (CUPS)"
 #sudo pacman -S cups cups-pdf print-manager --noconfirm
 #sudo systemctl enable cups.socket
 
-sudo pacman -S avahi networkmanager network-manager-applet ufw --noconfirm --needed
+sudo pacman -S avahi networkmanager network-manager-applet ufw ntfs-3g arandr downgrade --noconfirm --needed
+sudo pacman -S pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse gst-plugin-pipewire pavucontrol pamixer wireplumber pipewire-media-session --noconfirm --needed
 
 # pulseaudio-bluetooth
-sudo pacman -S thunderbird firefox ark vlc notepadqq arandr ntfs-3g yt-dlp noto-fonts-emoji --noconfirm --needed
+sudo pacman -S polkit fastfetch starship iptables --noconfirm --needed
 
-echo "Installing office package"
-sudo pacman -S libreoffice-fresh-en-gb libreoffice-extension-texmaths libreoffice-extension-writer2latex --noconfirm --needed
-sudo pacman -S fastfetch --noconfirm --needed
-sudo pacman -S starship iptables --noconfirm --needed
+echo "Installing office package and fonts"
 sudo pacman -S ttf-roboto ttf-firacode-nerd cantarell-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm --needed
 yay -S themechanger-git --noconfirm --needed
 yay -S archlinux-tweak-tool-git --noconfirm --needed
