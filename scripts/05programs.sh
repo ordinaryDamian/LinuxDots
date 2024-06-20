@@ -14,9 +14,9 @@ sudo pacman -Syyu --noconfirm
 #xdg-user-dirs-update
 # sudo systemctl enable vmtoolsd
 
-sudo pacman -S curl zip unzip mlocate eza wget pkgfile openssl openssh git net-tools tldr trash-cli tar cmake bash-completion xz  --noconfirm 
-sudo pacman -S man cowsay btop cmatrix ripgrep fd npm python hwinfo usbutils smartmontools flatpak bat bzip2 bzip3 gzip unarchiver cpupower --noconfirm 
-sudo pacman -S coreutils less findutils diffutils grep sed gawk util-linux procps-ng binutils findutils file acpi unrar ncompress ffmpegthumbnailer --noconfirm 
+sudo pacman -S curl zip unzip mlocate eza wget pkgfile openssl openssh git net-tools tldr trash-cli tar cmake bash-completion xz --noconfirm --needed
+sudo pacman -S man cowsay btop cmatrix ripgrep fd npm python hwinfo usbutils smartmontools flatpak bat bzip2 bzip3 gzip unarchiver cpupower --noconfirm --needed 
+sudo pacman -S coreutils less findutils diffutils grep sed gawk util-linux procps-ng binutils findutils file acpi unrar ncompress ffmpegthumbnailer --noconfirm --needed
 #sudo pacman -S wireless_tools wpa_supplicant --noconfirm
 
 #echo "Installing Printer suuport (CUPS)"
@@ -29,7 +29,7 @@ sudo pacman -S pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-puls
 # pulseaudio-bluetooth
 sudo pacman -S polkit fastfetch starship iptables --noconfirm --needed
 
-echo "Installing office package and fonts"
+#echo "Installing office package and fonts"
 sudo pacman -S ttf-roboto ttf-firacode-nerd cantarell-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm --needed
 yay -S themechanger-git --noconfirm --needed
 yay -S archlinux-tweak-tool-git --noconfirm --needed

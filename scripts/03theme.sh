@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# sudo pacman -S gnome-themes-extra --noconfirm
+sudo pacman -S gnome-themes-extra --noconfirm
 # sudo pacman -S gtk-engine-murrine gtk-engines --noconfirm
 sudo pacman -S tar --noconfirm --needed
 sudo pacman -S sassc --noconfirm --needed
@@ -14,7 +14,7 @@ yay -S bibata-cursor-theme --noconfirm --needed
 
 git clone https://github.com/vinceliuice/Tela-circle-icon-theme
 cd Tela-circle-icon-theme
-./install.sh
+sudo ./install.sh
 
 cd ..
 
@@ -24,10 +24,13 @@ sudo ./install.sh
 
 cd ..
 
-git https://github.com/vinceliuice/Graphite-kde-theme
+git clone https://github.com/vinceliuice/Graphite-kde-theme
 cd Graphite-kde-theme
-./install.sh
-#git clone https://github.com/vinceliuice/Graphite-gtk-theme
-#cd Graphite-gtk-theme/
-#./install.sh
+sudo ./install.sh
+
+cd ..
+
+git clone https://github.com/vinceliuice/Graphite-gtk-theme
+cd Graphite-gtk-theme/
+sudo ./install.sh
 #cd ..
