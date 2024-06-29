@@ -23,16 +23,15 @@ sudo pacman -S coreutils less findutils diffutils grep sed gawk util-linux procp
 #sudo pacman -S cups cups-pdf print-manager --noconfirm
 #sudo systemctl enable cups.socket
 
-sudo pacman -S avahi networkmanager network-manager-applet ufw ntfs-3g arandr downgrade --noconfirm --needed
+sudo pacman -S avahi networkmanager network-manager-applet iptables ufw ntfs-3g arandr downgrade xournalpp  --noconfirm --needed
 sudo pacman -S pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse gst-plugin-pipewire pavucontrol pamixer wireplumber pipewire-media-session --noconfirm --needed
 
 # pulseaudio-bluetooth
-sudo pacman -S polkit fastfetch starship iptables --noconfirm --needed
+sudo pacman -S polkit fastfetch starship xsettingsd tree moreutils gdb fortune cowsay lolcat thefuck --noconfirm --needed
 
 #echo "Installing office package and fonts"
 sudo pacman -S ttf-roboto ttf-firacode-nerd cantarell-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm --needed
-yay -S themechanger-git --noconfirm --needed
-yay -S archlinux-tweak-tool-git --noconfirm --needed
+yay -S themechanger-git downgrade archlinux-tweak-tool-git --noconfirm --needed
 sudo systemctl enable fstrim.timer
 sudo systemctl enable NetworkManager
 sudo systemctl enable avahi-daemon.service
