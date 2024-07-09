@@ -27,11 +27,12 @@ sudo pacman -S avahi networkmanager network-manager-applet iptables ufw ntfs-3g 
 sudo pacman -S pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse gst-plugin-pipewire pavucontrol pamixer wireplumber pipewire-media-session --noconfirm --needed
 
 # pulseaudio-bluetooth
-sudo pacman -S polkit fastfetch starship xsettingsd tree moreutils gdb fortune cowsay lolcat thefuck --noconfirm --needed
+sudo pacman -S polkit fastfetch starship xsettingsd tree moreutils gdb fortune cowsay lolcat thefuck glances --noconfirm --needed
 
 #echo "Installing office package and fonts"
 sudo pacman -S ttf-roboto ttf-firacode-nerd cantarell-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm --needed
-yay -S themechanger-git downgrade archlinux-tweak-tool-git --noconfirm --needed
+yay -S downgrade archlinux-tweak-tool-git --noconfirm --needed
+yay -S themechanger-git
 sudo systemctl enable fstrim.timer
 sudo systemctl enable NetworkManager
 sudo systemctl enable avahi-daemon.service
