@@ -114,6 +114,7 @@ alias yaysua='yay -Sua --noconfirm'                                 # update onl
 alias yaysyu='yay -Syu --noconfirm'                                 # update standard pkgs and AUR pkgs (yay)
 alias unlock='sudo rm /var/lib/pacman/db.lck'                       # remove pacman lock
 alias cleanup='sudo pacman -R $(pacman -Qtdq) && sudo pacman -Scc'  # remove orphaned packages
+alias neofetch='fastfetch'
 
 #Starship prompt
 eval "$(starship init bash)"

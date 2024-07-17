@@ -12,7 +12,7 @@ yay -S bibata-cursor-theme --noconfirm --needed
 
 git clone https://github.com/vinceliuice/Tela-circle-icon-theme
 cd Tela-circle-icon-theme
-sudo ./install.sh
+sudo ./install.sh -a
 
 cd ..
 

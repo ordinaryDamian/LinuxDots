@@ -5,7 +5,7 @@
 # Use sudo and sed to modify pacman.conf
 sudo sed -i 's/^#Color/Color/' /etc/pacman.conf
 sudo sed -i 's/^#VerbosePkgLists/VerbosePkgLists/' /etc/pacman.conf
-sudo sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 7\nILoveCandy/' /etc/pacman.conf
+sudo sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 5\nILoveCandy/' /etc/pacman.conf
 
 # running update for pacman and reflector
 sudo pacman -S pacman-contrib reflector rebuild-detector linux-headers --noconfirm --needed
