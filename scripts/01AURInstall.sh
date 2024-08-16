@@ -8,6 +8,8 @@ sudo pacman -S git base-devel --noconfirm --needed
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
+yay -Y --gendb
+yay -Y --devel --save
 yay -Syyu
 
 # echo "AUR helper (1-yay|2-paru):"

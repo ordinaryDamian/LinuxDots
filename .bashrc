@@ -108,6 +108,11 @@ alias update-fc='sudo fc-cache -fv'
 #hardware info --short
 alias hw="hwinfo --short"
 # pacman and yay
+alias update-arch='yay && flatpak update'
+alias clean-arch='yay -Sc && yay -Yc && flatpak remove --unused'
+alias update-mirrors='sudo reflector --verbose --score 100 --latest 20 --fastest 5 --sort rate --save /etc/pacman.d/mirrorlist'
+alias fix-key='sudo rm /var/lib/pacman/sync/* && sudo rm -rf /etc/pacman.d/gnupg/* && sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman --noconfirm -Su'
+
 alias pacsyu='sudo pacman -Syu'                                     # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                                   # Refresh pkglist & update standard pkgs
 alias yaysua='yay -Sua --noconfirm'                                 # update only AUR pkgs (yay)
