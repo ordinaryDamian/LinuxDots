@@ -17,8 +17,8 @@ sudo pacman -Syyu --noconfirm
 
 sudo pacman -S --noconfirm --needed curl zip unzip mlocate eza wget pkgfile openssl openssh git net-tools tldr trash-cli tar cmake bash-completion xz 
 sudo pacman -S --noconfirm --needed man cowsay btop cmatrix ripgrep fd npm python hwinfo usbutils smartmontools flatpak flatpak-kcm bat bzip2 bzip3 gzip unarchiver cpupower 
-sudo pacman -S --noconfirm --needed coreutils less findutils diffutils grep sed gawk util-linux procps-ng binutils file acpi unrar ncompress ffmpegthumbnailer 
-sudo pacman -S --noconfirm --needed wireless_tools wpa_supplicant fwupd
+sudo pacman -S --noconfirm --needed coreutils less findutils diffutils grep sed gawk util-linux procps-ng binutils file acpi unrar ncompress ffmpegthumbnailer fwupd nmapopenbsd-netcat
+sudo pacman -S --noconfirm --needed wireless_tools wpa_supplicant iw 
 
 #echo "Installing Printer suuport (CUPS)"
 #sudo pacman -S --noconfirm --needed cups cups-pdf print-manager 
