@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo pacman -S --noconfirm --needed plasma-desktop plasma-workspace ark kvantum dolphin dolphin-plugins bluedevil kdeplasma-addons flatpak ffmpegthumbs kdegraphics-thumbnailers kpipewire konsole sddm sddm-kcm systemsettings krunner plasma-firewall kcalc kcharselect packagekit-qt6  
+sudo pacman -S --noconfirm --needed plasma-desktop plasma-workspace ark kvantum dolphin dolphin-plugins bluedevil kdeplasma-addons flatpak ffmpegthumbs kdegraphics-thumbnailers kpipewire konsole sddm sddm-kcm systemsettings krunner plasma-firewall kcalc qalculate-qt kcharselect packagekit-qt6  
 
 sudo pacman -S --noconfirm --needed plasma-meta plasma ark dolphin dolphin-plugins kdeplasma-addons flatpak ffmpegthumbs sddm-kcm systemsettings egl-wayland kate kinit kscreen plasma-nm plasma-pa kaccounts-integration kdialog
 sudo pacman -S --noconfirm --needed kmix okular partitionmanager gparted yakuake
