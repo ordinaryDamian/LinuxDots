@@ -97,7 +97,7 @@ alias cp='cp -iv'
 alias mkdir='mkdir -vp'
 alias rmdir='rmdir -vp'
 alias reboot='sudo reboot'
-alias shutdown='sudo shutdown now'
+alias shutdown='sudo shutdown'
 alias df='df -h'
 alias free="free -mt"
 alias wget="wget -c"
@@ -123,5 +123,3 @@ alias neofetch='fastfetch'
 
 #Starship prompt
 eval "$(starship init bash)"
-
-#pfetch

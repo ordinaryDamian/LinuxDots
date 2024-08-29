@@ -5,7 +5,7 @@
 
 
 # Install the necessary packages for the virtual machine manager
-sudo pacman -S ebtables qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat dmidecode libguestfs virt-install --noconfirm --needed
+sudo pacman -S ebtables qemu dnsmasq vde2 bridge-utils openbsd-netcat dmidecode libguestfs --noconfirm --needed
 yay -S tuned qemu-full libvirt virt-install virt-manager virt-viewer edk2-ovmf swtpm qemu-img guestfs-tools libosinfo --noconfirm --needed
 sudo sed -i 's/#unix_sock_group = "libvirt"/unix_sock_group = "libvirt"/' /etc/libvirt/libvirtd.conf
 sudo sed -i 's/#unix_sock_rw_perms = "0770"/unix_sock_rw_perms = "0770"/' /etc/libvirt/libvirtd.conf
