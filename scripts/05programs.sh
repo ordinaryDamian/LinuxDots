@@ -39,9 +39,11 @@ yay -S --needed --noconfirm ufw gufw ufw-extras iptables tuned
 #echo "Installing office package and fonts"
 sudo pacman -S --noconfirm --needed ttf-roboto ttf-firacode-nerd cantarell-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji libreoffice-fresh libreoffice-fresh-sk libreoffice-extension-texmaths 
 yay -S --noconfirm --needed downgrade arch-update 
+yay -S --noconfirm --needed acpi acpid acpi_call acpi_call acpi_call acpilight
 # yay -S themechanger-git archlinux-tweak-tool-git --noconfirm --needed
 sudo systemctl enable fstrim.timer
 sudo systemctl enable sshd
+sudo systemctl enable acpid
 sudo systemctl enable NetworkManager
 sudo systemctl enable avahi-daemon.service
 sudo systemctl enable ufw.service
