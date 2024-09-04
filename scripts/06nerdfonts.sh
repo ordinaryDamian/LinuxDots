@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# ...  ...
+# ..    ..
+# .  DN  . 
+# ..    ..
+# ...  ...
+
 echo "Nerd fonts install"
 
 mkdir -p ~/.local/share/fonts

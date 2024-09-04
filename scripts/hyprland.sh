@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+
+# ...  ...
+# ..    ..
+# .  DN  . 
+# ..    ..
+# ...  ...
+
 # spustit KDE polkit agent
 # https://github.com/dianaw353/hyprland-starter?tab=readme-ov-file
 sudo pacman -S polkit-kde-agent wayland xorg-xwayland gtk4 gtk3 hyprland hyprpaper swww python-pywal xdg-desktop-portal-hyprland --noconfirm

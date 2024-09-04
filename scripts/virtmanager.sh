@@ -3,6 +3,11 @@
 # https://sysguides.com/install-kvm-on-linux
 # https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm
 
+# ...  ...
+# ..    ..
+# .  DN  . 
+# ..    ..
+# ...  ...
 
 # Install the necessary packages for the virtual machine manager
 sudo pacman -S ebtables qemu dnsmasq vde2 bridge-utils openbsd-netcat dmidecode libguestfs --noconfirm --needed

@@ -1,6 +1,10 @@
 #! /bin/bash
 
-# echo "Setting up pacman package manager."
+# ...  ...
+# ..    ..
+# .  DN  . 
+# ..    ..
+# ...  ...
 
 # Use sudo and sed to modify pacman.conf
 sudo sed -i 's/^#Color/Color/' /etc/pacman.conf

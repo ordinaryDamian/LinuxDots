@@ -1,8 +1,14 @@
 #! /bin/bash
 
-sudo pacman -S gnome-themes-extra --noconfirm
+# ...  ...
+# ..    ..
+# .  DN  . 
+# ..    ..
+# ...  ...
+
+# sudo pacman -S gnome-themes-extra --noconfirm
 # sudo pacman -S gtk-engine-murrine gtk-engines --noconfirm
-sudo pacman -S tar sassc kvantum --noconfirm --needed
+#sudo pacman -S tar sassc kvantum --noconfirm --needed
 #yay -S qogir-gtk-theme --noconfirm
 
 # wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata-Modern-Classic.tar.xz

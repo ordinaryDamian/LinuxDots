@@ -1,8 +1,10 @@
 #! /bin/bash
 
-#echo "Installing yay (yet another yogurt) AUR helper."
-#echo "What is AUR ? : https://itsfoss.com/aur-arch-linux/ "
-#sleep 5
+# ...  ...
+# ..    ..
+# .  DN  . 
+# ..    ..
+# ...  ...
 sudo pacman -S --noconfirm --needed git base-devel 
 
 git clone https://aur.archlinux.org/yay.git
