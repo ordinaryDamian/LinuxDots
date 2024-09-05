@@ -13,7 +13,7 @@ sudo pacman -S --noconfirm --needed nemo nemo-emblems nemo-fileroller nemo-image
 
 sudo pacman -Rns --noconfirm epiphany snapshot gnome-connections gnome-console gnome-contacts evince yelp yelp-xsl loupe gnome-logs gnome-maps gnome-music gnome-software gnome-user-docs
 sudo pacman -Rns --noconfirm gnome-system-monitor gnome-text-editor gnome-tour totem gnome-weather arandr seahorse gnome-disk-utility
-sudo pacman -S --needed --noconfirm dconf-editor signal-desktop bitwarden gnome-nettool gnome-power-manager gnome-themes-extra polkit-gnome 
+sudo pacman -S --needed --noconfirm dconf-editor signal-desktop bitwarden gnome-nettool gnome-power-manager gnome-themes-extra polkit-gnome gtk-engine-murrine gtk-engines
 
 yay -S --noconfirm --needed extension-manager vim
 sudo systemctl enable gdm.service

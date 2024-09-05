@@ -9,7 +9,7 @@
 # Use sudo and sed to modify pacman.conf
 sudo sed -i 's/^#Color/Color/' /etc/pacman.conf
 sudo sed -i 's/^#VerbosePkgLists/VerbosePkgLists/' /etc/pacman.conf
-sudo sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 5\nILoveCandy/' /etc/pacman.conf
+sudo sed -i 's/^#ParallelDownloads = 5/ParallelDownloads = 6\nILoveCandy/' /etc/pacman.conf
 
 sudo pacman -S --noconfirm --needed pacman-contrib reflector rebuild-detector linux-headers 
 # sudo reflector --verbose --protocol https,http --latest 5 --sort rate --country Slovakia,Polland,Germany --save /etc/pacman.d/mirrorlist
