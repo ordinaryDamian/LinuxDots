@@ -29,7 +29,7 @@ sudo pacman -S --noconfirm --needed amd-ucode
 sudo pacman -S --noconfirm --needed e2fsprogs
 
 # BTRFS file system support
-sudo pacman -S --noconfirm --needed btrfs-progs timeshift
+sudo pacman -S --noconfirm --needed btrfs-progs timeshift grub-btrfs
 
 #VMware drivers
 sudo pacman -S --noconfirm --needed open-vm-tools
@@ -40,7 +40,7 @@ sudo systemctl enable vmtoolsd.service
 
 sudo pacman -S --noconfirm --needed curl zip unzip mlocate eza wget pkgfile openssl openssh git net-tools tldr trash-cli tar cmake bash-completion xz fzf moreutils
 sudo pacman -S --noconfirm --needed man cowsay btop cmatrix ripgrep fd npm python hwinfo usbutils smartmontools flatpak flatpak-kcm bat bzip2 bzip3 gzip unarchiver  
-sudo pacman -S --noconfirm --needed coreutils less findutils diffutils grep sed gawk util-linux procps-ng binutils file acpi p7zip unrar ncompress ffmpegthumbnailer fwupd nmapopenbsd-netcat libva-utils
+sudo pacman -S --noconfirm --needed coreutils less findutils diffutils grep sed gawk util-linux procps-ng binutils file acpi p7zip unrar ncompress ffmpegthumbnailer fwupd nmap openbsd-netcat libva-utils
 sudo pacman -S --needed --noconfirm hunspell hunspell-sk duf btop fuse2fs exfatprogs fuse2 fuse3 man-db man-pages ffmpegthumbs nmap
 sudo pacman -S --noconfirm --needed polkit starship tree gdb lolcat thefuck bind ddrescue dmidecode ethtool exfatprogs ndisc6 
 sudo pacman -S --noconfirm --needed avahi networkmanager ntfs-3g gnu-netcat dosfstools hdparm lftp mkinitcpio-nfs-utils nfs-utils
