@@ -16,35 +16,35 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
+# if [ -f /etc/bashrc ]; then
+#     . /etc/bashrc
+# fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-    for rc in ~/.bashrc.d/*; do
-        if [ -f "$rc" ]; then
-            . "$rc"
-        fi
-    done
-fi
+# if [ -d ~/.bashrc.d ]; then
+#     for rc in ~/.bashrc.d/*; do
+#         if [ -f "$rc" ]; then
+#             . "$rc"
+#         fi
+#     done
+# fi
 
 unset rc
 
 #Completition for PATH
-if [ -d "$HOME/.bin" ] ;
-then PATH="$HOME/.bin:$PATH"
-fi
+# if [ -d "$HOME/.bin" ] ;
+# then PATH="$HOME/.bin:$PATH"
+# fi
 
-if [ -d "$HOME/.local/bin" ] ;
-then PATH="$HOME/.local/bin:$PATH"
-fi
+# if [ -d "$HOME/.local/bin" ] ;
+# then PATH="$HOME/.local/bin:$PATH"
+# fi
 
 # Add directory to the $PATH variable for adi1090x rofi scripts
-echo "PATH=$PATH:~/.config/rofi/scripts" >> ~/.profile
+# echo "PATH=$PATH:~/.config/rofi/scripts" >> ~/.profile
 
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
@@ -112,11 +112,6 @@ alias update-arch='yay && flatpak update'
 alias clean-arch='yay -Sc && yay -Yc && flatpak remove --unused'
 alias update-mirrors='sudo reflector --verbose --score 100 --latest 20 --fastest 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias fix-key='sudo rm /var/lib/pacman/sync/* && sudo rm -rf /etc/pacman.d/gnupg/* && sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring && sudo pacman --noconfirm -Su'
-
-alias pacsyu='sudo pacman -Syu'                                     # update only standard pkgs
-alias pacsyyu='sudo pacman -Syyu'                                   # Refresh pkglist & update standard pkgs
-alias yaysua='yay -Sua --noconfirm'                                 # update only AUR pkgs (yay)
-alias yaysyu='yay -Syu --noconfirm'                                 # update standard pkgs and AUR pkgs (yay)
 alias unlock='sudo rm /var/lib/pacman/db.lck'                       # remove pacman lock
 alias cleanup='sudo pacman -R $(pacman -Qtdq) && sudo pacman -Scc'  # remove orphaned packages
 alias neofetch='fastfetch'

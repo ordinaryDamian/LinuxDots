@@ -1,13 +1,13 @@
-# Script Name
+# LinuxDots
 
-This is a script that does XYZ.
+Personal scripts and files to run Arch Linux asap
 
 ## How to Execute
 
 1. First install the dependencie `git` and some kind of editor such as `nano`, `micro` or `vim` 
 2. Clone and navigate to the directory where the script is located.
 ```bash
-git clone https://github.com/ordinaryDamian/LinuxDots
+git clone https://github.com/ordinaryDamian/LinuxDots & cd LinuxDots/scripts
 ```
 3. Run the following command:
 
