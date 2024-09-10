@@ -16,14 +16,16 @@
 # mv Bibata-* ~/.local/share/icons/     # Install to local users
 # sudo mv Bibata-* /usr/share/icons/    # Install to all user
 
+echo "Cursor theme Bibata istallation"
 yay -S --noconfirm --needed bibata-cursor-theme 
+echo "Cursor theme Bibata installed"
 
 git clone https://github.com/vinceliuice/Tela-circle-icon-theme
 cd Tela-circle-icon-theme
 sudo ./install.sh -a
 
 cd ..
-
+echo "Icon theme Tela-circle installed"
 #git clone https://github.com/vinceliuice/Graphite-cursors
 #cd Graphite-cursors
 #sudo ./install.sh
