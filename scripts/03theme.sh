@@ -16,7 +16,7 @@
 # mv Bibata-* ~/.local/share/icons/     # Install to local users
 # sudo mv Bibata-* /usr/share/icons/    # Install to all user
 
-yay -S bibata-cursor-theme --noconfirm --needed
+yay -S --noconfirm --needed bibata-cursor-theme 
 
 git clone https://github.com/vinceliuice/Tela-circle-icon-theme
 cd Tela-circle-icon-theme
