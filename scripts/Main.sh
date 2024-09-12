@@ -1,5 +1,6 @@
 #!/bin/bash
-SCRIPTS_DIR="$HOME/LinuxDots/scripts"
+#SCRIPTS_DIR="$HOME/LinuxDots/scripts"
+start_time=$(date +"%T")
 # Check if the script is being run as root
 if [ "$EUID" -eq 0 ]; then
   echo "Please do not run this script as root."
@@ -25,10 +26,10 @@ cp $HOME/LinuxDots/.bashrc $HOME/.bashrc
 sudo pacman -Syu --noconfirm
 
 chmod u+x *.sh
-source SCRIPTS_DIR/00pacman.sh
-source SCRIPTS_DIR/01AURInstall.sh
-source SCRIPTS_DIR/02grub2theme.sh
-source SCRIPTS_DIR/03theme.sh
+source ./00pacman.sh
+source ./01AURInstall.sh
+source ./02grub2theme.sh
+source ./03theme.sh
 
 # Prompt user to install Plymouth
 read -p "Do you want to install Plymouth? (yes/no): " install_plymouth
@@ -37,7 +38,7 @@ if [[ $install_plymouth == "yes" ]]; then
     echo "Instructions to install plymouth"
     echo "open the /etc/mkinitcpio.conf and add the plymouth at the end of the HOOKS parameter"
     echo "open the /etc/default/grub append the quiet splash under parameter GRUB_CMDLINE_LINUX_DEFAULT"
-    source SCRIPTS_DIR/04plymouth.sh
+    source ./04plymouth.sh
 else
     echo "Skipping Plymouth installation."
 fi
@@ -45,14 +46,14 @@ fi
 echo "Now change 05programs.sh to install the programs you want and do not need, once done press any key to continue"
 # Pause for user input
 read -p "Press any key to continue..."
-source SCRIPTS_DIR/05programs.sh
+source ./05programs.sh
 
 echo "Now change 06nerdfonts.sh to install the fonts you wantand do not nee, once done press any key to continue"
 read -p "Press any key to continue..."
-source SCRIPTS_DIR/06nerdfonts.sh
+source ./06nerdfonts.sh
 
 echo "Neovim install"
-source SCRIPTS_DIR/07nvim.sh
+source ./07nvim.sh
 
 # Prompt user to choose an option
 while true; do
@@ -60,12 +61,12 @@ while true; do
     case $option in
         A)
             echo "Option A - Gnome selected."
-            source SCRIPTS_DIR/08gnome.sh
+            source ./08gnome.sh
             break
             ;;
         B)
             echo "Option B - Plasma-KDE selected."
-            source SCRIPTS_DIR/08plasma.sh
+            source ./08plasma.sh
             break
             ;;
         C)
@@ -79,8 +80,12 @@ while true; do
     esac
 done
 echo "Installing GUI applications"
-source SCRIPTS_DIR/09GUIapps.sh
+source ./09GUIapps.sh
 
 echo "Lastly install qemu and virt-manager"
 echo "TUTORIAL: https://sysguides.com/install-kvm-on-linux"
 echo "TUTORIAL 2: https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm"
+sudo updatedb
+current_time=$(date +"%T")
+echo "Script started at: $start_time"
+echo "Script finished at: $current_time"
