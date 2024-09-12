@@ -62,7 +62,7 @@ fi
 
 $yay_cmd curl zip unzip mlocate eza wget pkgfile openssl openssh git net-tools tldr trash-cli tar cmake bash-completion xz fzf moreutils
 $yay_cmd man cowsay btop cmatrix ripgrep fd npm python hwinfo usbutils smartmontools flatpak flatpak-kcm bat bzip2 bzip3 gzip unarchiver  
-$yay_cmd coreutils less duf btop fuse2fs exfatprogs fuse2 fuse3 man-db man-pages ffmpegthumbs nmap
+$yay_cmd coreutils less duf btop fuse2fs exfatprogs fuse2 fuse3 man-db man-pages ffmpegthumbs nmap haskell-hostname
 $yay_cmd polkit starship tree gdb lolcat thefuck bind ddrescue dmidecode ethtool exfatprogs ndisc6 
 $yay_cmd avahi networkmanager ntfs-3g dosfstools hdparm lftp mkinitcpio-nfs-utils nfs-utils
 $yay_cmd openconnect vpnc rp-pppoe rsync syncthing sg3_utils tcpdump terminus-font usb_modeswitch usbutils
