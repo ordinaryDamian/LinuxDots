@@ -25,6 +25,9 @@ case "${item}" in
         cd grub2-themes
         sudo ./install.sh
     ;;
+    3)
+        yay -S catppuccin-mocha-grub-theme-git --noconfirm
+    ;;
     *)
         echo "default (none of above)"
     ;;
