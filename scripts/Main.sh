@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPTS_DIR="$HOME/LinuxDots/scripts"
+# SCRIPTS_DIR="$HOME/LinuxDots/scripts"
 start_time=$(date +"%T")
 # Check if the script is being run as root
 if [ "$EUID" -eq 0 ]; then
@@ -25,11 +25,11 @@ cp $HOME/LinuxDots/.bashrc $HOME/.bashrc
 
 chmod u+x *.sh
 source ./00pacman.sh
-cd SCRIPTS_DIR
+cd $HOME/LinuxDots/scripts
 source ./01AURInstall.sh
-cd SCRIPTS_DIR
+cd $HOME/LinuxDots/scripts
 source ./02grub2theme.sh
-cd SCRIPTS_DIR
+cd $HOME/LinuxDots/scripts
 source ./03theme.sh
 
 # Prompt user to install Plymouth
@@ -39,7 +39,7 @@ if [[ $install_plymouth == "yes" ]]; then
     echo "Instructions to install plymouth"
     echo "open the /etc/mkinitcpio.conf and add the plymouth at the end of the HOOKS parameter"
     echo "open the /etc/default/grub append the quiet splash under parameter GRUB_CMDLINE_LINUX_DEFAULT"
-    cd SCRIPTS_DIR
+    cd $HOME/LinuxDots/scripts
     source ./04plymouth.sh
 else
     echo "Skipping Plymouth installation."
@@ -48,17 +48,17 @@ fi
 echo "Now change 05programs.sh to install the programs you want and do not need, once done press any key to continue"
 # Pause for user input
 read -p "Press any key to continue..."
-cd SCRIPTS_DIR
+cd $HOME/LinuxDots/scripts
 source ./05programs.sh
 
 echo "Now change 06nerdfonts.sh to install the fonts you wantand do not nee, once done type yes to continue"
 read -p "Do you want to install Custom NerdFonts? (yes/no): " nerdFonts
 if [[ $nerdFonts == "yes" ]]; then
-    cd SCRIPTS_DIR
+    cd $HOME/LinuxDots/scripts
     source ./06nerdfonts.sh
 fi
 echo "Neovim install"
-cd SCRIPTS_DIR
+cd $HOME/LinuxDots/scripts
 source ./07nvim.sh
 
 # Prompt user to choose an option
@@ -67,13 +67,13 @@ while true; do
     case $option in
         A)
             echo "Option A - Gnome selected."
-            cd SCRIPTS_DIR
+            cd $HOME/LinuxDots/scripts
             source ./08gnome.sh
             break
             ;;
         B)
             echo "Option B - Plasma-KDE selected."
-            cd SCRIPTS_DIR
+            cd $HOME/LinuxDots/scripts
             source ./08plasma.sh
             break
             ;;
@@ -88,7 +88,7 @@ while true; do
     esac
 done
 echo "Installing GUI applications"
-cd SCRIPTS_DIR
+cd $HOME/LinuxDots/scripts
 source ./09GUIapps.sh
 
 echo "Lastly install qemu and virt-manager"
