@@ -13,7 +13,7 @@
 #cd grub2-themes
 #sudo ./install.sh
 
-echo "Grub Theme (1-dedsec|2-tela):"
+echo "Grub Theme (1-dedsec|2-tela|3-catppuccin):"
 read item
 case "${item}" in
     1)

@@ -24,6 +24,7 @@ read -p "Do you want to install laptop support packages? (yes/no): " choiceLapto
 read -p "Do you want to install Wireless Network support packages? (yes/no): " WIFI
 read -p "Do you want to install Bluetooth support packages? (yes/no): " BLUETOOTH
 read -p "Do you want to install Printing support packages? (yes/no): " PRINT
+read -p "Do you want to install AMD or Intel microcode()depending on your CPU? (AMD/INTEL): " CPU
 
 sudo pacman -Syu --noconfirm
 
@@ -34,11 +35,18 @@ fi
 if [[ $VBOX == "yes" ]]; then
     $yay_cmd virtualbox-host-modules-arch virtualbox-guest-utils mesa 
 fi
- 
+# Microcode
+if [[ $CPU == "AMD" ]]; then
+# AMD Microcode
+    $yay_cmd amd-ucode
+elif [[ $CPU == "INTEL" ]]; then
+# Intel Microcode
+    $yay_cmd intel-ucode
+fi
+
 # Intel GPU drivers
-$yay_cmd intel-ucode mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader intel-media-driver intel-gmmlib onevpl-intel-gpu vulkan-mesa-layers libva-mesa-driver
-# AMD  drivers
-$yay_cmd amd-ucode 
+$yay_cmd mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader intel-media-driver intel-gmmlib onevpl-intel-gpu vulkan-mesa-layers libva-mesa-driver
+ 
 
 # File system support
 
