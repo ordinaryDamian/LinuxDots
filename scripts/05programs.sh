@@ -24,7 +24,8 @@ read -p "Do you want to install laptop support packages? (yes/no): " choiceLapto
 read -p "Do you want to install Wireless Network support packages? (yes/no): " WIFI
 read -p "Do you want to install Bluetooth support packages? (yes/no): " BLUETOOTH
 read -p "Do you want to install Printing support packages? (yes/no): " PRINT
-read -p "Do you want to install AMD or Intel microcode()depending on your CPU? (AMD/INTEL): " CPU
+read -p "Do you want to install AMD or Intel microcode(depending on your CPU)? (AMD/INTEL): " CPU
+read -p "Do you want to install AMD or Intel GPU(Nvidia is manual only)? (AMD/INTEL): " GPU
 
 sudo pacman -Syu --noconfirm
 
@@ -44,12 +45,17 @@ elif [[ $CPU == "INTEL" ]]; then
     $yay_cmd intel-ucode
 fi
 
-# Intel GPU drivers
-$yay_cmd mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader intel-media-driver intel-gmmlib onevpl-intel-gpu vulkan-mesa-layers libva-mesa-driver
- 
 
+# Microcode
+if [[ $GPU == "AMD" ]]; then
+    # AMD GPU drivers
+    $yay_cmd mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader vulkan-mesa-layers
+ode
+elif [[ $GPU == "INTEL" ]]; then
+    # Intel GPU drivers
+    $yay_cmd mesa lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader intel-media-driver intel-gmmlib onevpl-intel-gpu vulkan-mesa-layers libva-mesa-driver
+fi
 # File system support
-
 if [[ $filesystem == "EXT" ]]; then
     $yay_cmd e2fsprogs
 fi
@@ -63,7 +69,7 @@ if [[ $VMWARE == "yes" ]]; then
     sudo systemctl enable vmtoolsd.service 
 fi
 
-# KVM drivers
+# QEMU KVM drivers
 if [[ $QEMU == "yes" ]]; then
     $yay_cmd virt-what vulkan-swrast lib32-vulkan-swrast vulkan-icd-loader lib32-vulkan-icd-loader spice-vdagent qemu-guest-agent hyperv 
 fi
