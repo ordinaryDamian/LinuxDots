@@ -9,15 +9,17 @@
 
 yay_cmd="yay -S --needed --noconfirm"
 
-$yay_cmd gtk4 gtk3 gdm gnome-backgrounds gnome-calculator qalculate-gtk gnome-calendar gnome-characters gnome-control-center gnome-font-viewer gnome-keyring gnome-menus gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions notepadqq tecla xdg-desktop-portal-gnome xdg-user-dirs-gtk gvfs gvfs-onedrive gvfs-smb gvfs-wsdd 
-$yay_cmd file-roller ghex gnome-terminal gnome-tweaks gnome-chess tracker3 fwupd eog  
+$yay_cmd baobab evince gdm gnome-calculator qalculate-gtk gnome-calendar gnome-characters gnome-clocks gnome-color-manager gnome-connections gnome-control-center gnome-font-viewer gnome-menus gnome-music gnome-remote-desktop gnome-session 
+$yay_cmd gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-user-share grilo-plugins gvfs gvfs-google gvfs-nfs gvfs-onedrive gvfs-smb gvfs-wsdd loupe simple-scan tecla tracker3 tracker3-miners xdg-desktop-portal-gnome 
+$yay_cmd gtk4 gtk3 xdg-user-dirs-gtk file-roller dconf-editor eog ghex gnome-terminal gnome-tweaks gnome-chess fwupd gnome-power-manager gnome-themes-extra polkit-gnome gtk-engines
+$yay_cmd gitg gnome-builder seahorse sysprof 
+# Nemo File browser
 $yay_cmd nemo nemo-emblems nemo-fileroller nemo-image-converter nemo-share nemo-terminal
-$yay_cmd nautilus libnautilus-extension nautilus-image-converter nautilus-share nautilus-checksums nautilus-open-any-terminal nautilus-terminal 
+# Nautilus File browser
+$yay_cmd nautilus libnautilus-extension nautilus-image-converter nautilus-share nautilus-checksums nautilus-open-any-terminal nautilus-terminal sushi
 
-sudo pacman -Rns --noconfirm epiphany snapshot gnome-connections gnome-console gnome-contacts evince yelp yelp-xsl loupe gnome-logs gnome-maps gnome-music gnome-software gnome-user-docs
-sudo pacman -Rns --noconfirm gnome-system-monitor gnome-text-editor gnome-tour totem gnome-weather arandr seahorse gnome-disk-utility
-$yay_cmd dconf-editor gnome-power-manager gnome-themes-extra polkit-gnome gtk-engine-murrine gtk-engines
+$yay_cmd extension-manager
+sudo pacman -Rns --noconfirm epiphany snapshot gnome-console gnome-contacts yelp yelp-xsl gnome-logs gnome-maps gnome-music gnome-software gnome-user-docs
+sudo pacman -Rns --noconfirm gnome-system-monitor gnome-text-editor gnome-tour totem gnome-weather arandr gnome-disk-utility
 
-$yay_cmd extension-manager vim
-sudo systemctl enable gdm.service
-sudo updatedb
+sudo systemctl enable gdm.service #gnome-user-share

@@ -23,4 +23,3 @@ git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catpp
 #sudo pacman -S --noconfirm --needed gimp
 sudo systemctl enable sddm.service
 $yay_cmd ocs-url
-sudo updatedb
