@@ -36,7 +36,7 @@ sudo ./install.sh -a
 cd ..
 echo "Icon theme Tela-circle installed"
 
-yay -S --noconfirm --needed colloid-catppuccin-theme-git 
+#yay -S --noconfirm --needed colloid-catppuccin-theme-git 
 
 # Global theme
 # git clone https://github.com/vinceliuice/Graphite-kde-theme
