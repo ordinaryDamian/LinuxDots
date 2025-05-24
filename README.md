@@ -26,6 +26,7 @@ Then execute the scipt:
 That's it! The bash script will now be executed and will download any dependencies.
 
 TODO:
-pridat power modeles ako default
-pridat gamemode
-pridat nvidia support
+pridat power modules ako default    
+pridat gamemode     
+pridat nvidia support       
+forknuť https://github.com/Cardiacman13/Architect
