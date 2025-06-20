@@ -20,7 +20,7 @@ echo "Updating the system"
 sudo pacman -Syyu --noconfirm
 
 echo "Updating the system and installing pacman-contrib reflector rebuild-detector linux-headers"
-sudo pacman -S --noconfirm --needed pacman-contrib reflector rebuild-detector linux-headers 
+sudo pacman -S --noconfirm --needed pacman-contrib reflector rebuild-detector linux-headers linux-firmware
 # sudo reflector --verbose --protocol https,http --latest 5 --sort rate --country Slovakia,Polland,Germany --save /etc/pacman.d/mirrorlist
 echo "Updating the mirrorlist"
 sudo reflector --protocol https,http,ftp --latest 50 --score 50 --sort rate --country SK,CZ,DE,HU,PL --fastest 10 --save /etc/pacman.d/mirrorlist

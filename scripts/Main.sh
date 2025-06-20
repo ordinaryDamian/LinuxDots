@@ -90,11 +90,15 @@ done
 echo "Installing GUI applications"
 cd $HOME/LinuxDots/scripts
 source ./09GUIapps.sh
+echo "Louching architect script"
+cd $HOME/LinuxDots/scripts
+source ./architect.sh
 
 echo "Lastly install qemu and virt-manager"
 echo "TUTORIAL: https://sysguides.com/install-kvm-on-linux"
 echo "TUTORIAL 2: https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm"
 sudo updatedb
+sudo mandb
 current_time=$(date +"%T")
 echo "Script started at: $start_time"
 echo "Script finished at: $current_time"

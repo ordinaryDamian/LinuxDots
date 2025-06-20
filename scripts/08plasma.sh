@@ -17,8 +17,7 @@ $yay_cmd egl-wayland kate kinit kaccounts-integration kdialog okular partitionma
 $yay_cmd qt6-wayland kio kio-extras kio-gdrive packagekit qt5-graphicaleffects kdeconnect kdiff3 krename krusader gwenview kamera kcolorchooser svgpart elisa #kvantum-theme-materia materia-kde kvantum
 $yay_cmd kdenetwork-filesharing krdc kcron kfind kgpg spectacle kcm-grub2-git
 # THEME
-$yay_cmd catppuccin-konsole-theme-git sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2 sddm-catppuccin-git
-git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde && ./install.sh
+$yay_cmd sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
 
 #sudo pacman -S --noconfirm --needed gimp
 sudo systemctl enable sddm.service
