@@ -19,8 +19,8 @@ $yay_cmd obs-studio gpart wireshark-cli wireshark-qt outfieldr
 $yay_cmd atac bitwarden gnome-nettool parsec-bin github-desktop-bin 
 $yay_cmd github-desktop-bin devtoolbox coolercontrol # Office suite
 $yay_cmd libreoffice-fresh libreoffice-fresh-sk libreoffice-extension-texmaths
-flatpak install flathub com.discordapp.Discord
-flatpak install flathub io.github.flattool.Warehouse
-flatpak install flathub org.localsend.localsend_app
+#flatpak install flathub com.discordapp.Discord
+#flatpak install flathub io.github.flattool.Warehouse
+#flatpak install flathub org.localsend.localsend_app
 # Audio/Video editing (commented out - uncomment if needed)
 # $yay_cmd audacity inkscape kdenlive krita blender

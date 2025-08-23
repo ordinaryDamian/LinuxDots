@@ -13,7 +13,7 @@
 #cd grub2-themes
 #sudo ./install.sh
 
-echo "Grub Theme (1-dedsec|2-tela|3-catppuccin):"
+echo "Grub Theme (1-dedsec|2-tela|3-catppuccin|4-ultrakill):"
 read item
 case "${item}" in
     1)
@@ -27,6 +27,11 @@ case "${item}" in
     ;;
     3)
         yay -S catppuccin-mocha-grub-theme-git --noconfirm
+    ;;
+    4)
+        echo "Installing ultrakill GRUB theme..."
+        # run the installer via wget piping to bash
+        wget -O - https://github.com/YouStones/ultrakill-grub-theme/raw/main/install.sh | bash
     ;;
     *)
         echo "default (none of above)"

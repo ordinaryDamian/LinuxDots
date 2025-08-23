@@ -54,6 +54,11 @@ if ask_confirm "Make all scripts in $SCRIPTS_DIR executable?"; then
     chmod u+x "$SCRIPTS_DIR"/*.sh 2>/dev/null || true
 fi
 
+# Optionally copy the repository .bashrc into the user's home
+if ask_confirm "Copy repository .bashrc to your home (~/.bashrc)?"; then
+    safe_source "$SCRIPTS_DIR/00copy_bashrc.sh"
+fi
+
 # Per-step prompts -------------------------------------------------------
 if ask_confirm "Install system packages (00pacman.sh)?"; then
     safe_source "$SCRIPTS_DIR/00pacman.sh"

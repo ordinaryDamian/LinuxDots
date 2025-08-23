@@ -44,8 +44,6 @@ elif [[ $CPU == "INTEL" ]]; then
 # Intel Microcode
     $yay_cmd intel-ucode
 fi
-
-
 # GPU drivers
 if [[ $GPU == "AMD" ]]; then
     # AMD GPU drivers
@@ -60,7 +58,7 @@ if [[ $filesystem == "EXT" ]]; then
 fi
 
 if [[ $filesystem == "BTRFS" ]]; then
-    $yay_cmd btrfs-progs timeshift grub-btrfs
+    $yay_cmd btrfs-progs grub-btrfs
 fi
 
 if [[ $VMWARE == "yes" ]]; then
