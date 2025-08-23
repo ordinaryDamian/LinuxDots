@@ -17,8 +17,7 @@ $yay_cmd visual-studio-code-bin obsidian
 # System tools and utilities
 $yay_cmd obs-studio gpart wireshark-cli wireshark-qt outfieldr
 $yay_cmd atac bitwarden gnome-nettool parsec-bin github-desktop-bin 
-
-# Office suite
+$yay_cmd github-desktop-bin devtoolbox coolercontrol # Office suite
 $yay_cmd libreoffice-fresh libreoffice-fresh-sk libreoffice-extension-texmaths
 flatpak install flathub com.discordapp.Discord
 flatpak install flathub io.github.flattool.Warehouse

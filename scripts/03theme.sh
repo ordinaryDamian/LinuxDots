@@ -24,17 +24,16 @@
 
 #cd ..
 
-echo "Cursor theme Bibata istallation"
-yay -S --noconfirm --needed bibata-cursor-theme 
-echo "Cursor theme Bibata installed"
+
+yay -S --noconfirm --needed bibata-cursor-theme tela-circle-icon-theme-all-git 
 
 # Icon themes
-git clone https://github.com/vinceliuice/Tela-circle-icon-theme
-cd Tela-circle-icon-theme
-sudo ./install.sh -a
+#git clone https://github.com/vinceliuice/Tela-circle-icon-theme
+#cd Tela-circle-icon-theme
+#sudo ./install.sh -a
 
-cd ..
-echo "Icon theme Tela-circle installed"
+#cd ..
+#echo "Icon theme Tela-circle installed"
 
 #yay -S --noconfirm --needed colloid-catppuccin-theme-git 
 

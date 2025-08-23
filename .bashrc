@@ -163,6 +163,7 @@ cd ()
 	else
 		builtin cd ~ && ls
 	fi
+}
 # Show the current distribution
 distribution () {
     local dtype="unknown"  # Default to unknown
@@ -317,7 +318,7 @@ if [ "$DISTRIBUTION" = "redhat" ] || [ "$DISTRIBUTION" = "arch" ] || [ "$DISTRIB
       alias bcat='bat'
 else
       alias bcat='batcat'
-fi}
+fi
 # IP address lookup
 alias whatismyip="whatsmyip"
 function whatsmyip () {

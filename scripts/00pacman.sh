@@ -39,4 +39,5 @@ echo "$config" | sudo tee /etc/xdg/reflector/reflector.conf >/dev/null
 
 echo "Enabling reflector.service(automatic mirror update) and paccache.timer"
 sudo systemctl enable reflector.service
+sudo systemctl enable reflector.timer
 sudo systemctl enable paccache.timer

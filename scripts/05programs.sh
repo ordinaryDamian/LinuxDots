@@ -74,13 +74,13 @@ if [[ $QEMU == "yes" ]]; then
 fi
 
 # Core system packages
-$yay_cmd curl zip unzip tar xz bzip2 bzip3 gzip unarchiver
+$yay_cmd curl zip unzip tar xz bzip2 bzip3 gzip u
 $yay_cmd mlocate plocate eza wget pkgfile openssl openssh git net-tools 
 $yay_cmd trash-cli cmake bash-completion fzf moreutils
 $yay_cmd man-db man-pages cowsay btop cmatrix ripgrep fd npm python 
 $yay_cmd hwinfo usbutils smartmontools flatpak flatpak-kcm bat 
 $yay_cmd coreutils less duf fuse2fs exfatprogs fuse2 fuse3 ffmpegthumbs nmap haskell-hostname
-$yay_cmd polkit starship tree gdb lolcat thefuck bind ddrescue dmidecode ethtool ndisc6 
+$yay_cmd polkit starship tree gdb lolcat  bind ddrescue dmidecode ethtool ndisc6 
 $yay_cmd avahi networkmanager ntfs-3g dosfstools hdparm lftp mkinitcpio-nfs-utils nfs-utils sshfs 
 $yay_cmd openconnect vpnc rp-pppoe rsync syncthing sg3_utils tcpdump terminus-font usb_modeswitch
 $yay_cmd netctl nm-connection-editor nss-mdns whois yt-dlp
@@ -136,23 +136,26 @@ $yay_cmd adobe-source-code-pro-fonts otf-font-awesome ttf-meslo-nerd
 $yay_cmd ttf-droid ttf-dejavu ttf-ubuntu-font-family
 
 # Security and system utilities
-$yay_cmd ufw ufw-extras iptables 
+$yay_cmd ufw ufw-extras iptables-nft 
 
 # System maintenance and utilities
-$yay_cmd downgrade arch-update rate-mirrors rebuild-detector
+$yay_cmd downgrade arch-update rebuild-detector
 $yay_cmd zoxide ncdu dysk tmon tuned-ppd-git systemd-manager-tui
 
 # Development tools  
 $yay_cmd go rust gcc-rust
 
 # Miscellaneous applications
-$yay_cmd github-desktop-bin devtoolbox coolercontrol joystickwake 
-$yay_cmd unp xclip
+
+$yay_cmd unp 
 
 # Flatpak setup
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Enable essential services
+sudo mandb
+sudo updatedb
+sudo systemctl enable tuned
 sudo systemctl enable fstrim.timer
 sudo systemctl enable sshd
 sudo systemctl enable NetworkManager
