@@ -1,12 +1,12 @@
 arch-update
-auto-cpufreq
+
 brave-bin
 coolercontrol
 devtoolbox
 downgrade
 github-desktop-bin
 hunspell-sk
-joystickwake
+
 linutil-bin
 localsend
 netbird
