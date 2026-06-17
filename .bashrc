@@ -1,7 +1,7 @@
 # .bashrc
 
 export EDITOR='nvim'
-export VISUAL='notepadqq'
+export VISUAL='kate'
 #shopt
 shopt -s autocd # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
@@ -155,15 +155,19 @@ mkdirg() {
 	mkdir -p "$1"
 	cd "$1"
 }
-# Automatically do an ls after each cd, z, or zoxide
-cd ()
-{
+
+llist() {
+	eza --long --binary --group --header --created --modified -am --group-directories-first --color=auto --sort=modified "$@"
+}
+
+cd() {
 	if [ -n "$1" ]; then
-		builtin cd "$@" && ls
+		builtin cd "$@" && llist
 	else
-		builtin cd ~ && ls
+		builtin cd ~ && llist
 	fi
 }
+
 # Show the current distribution
 distribution () {
     local dtype="unknown"  # Default to unknown
@@ -235,7 +239,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias lse='ls -lhCF --color=auto'
-alias vim='nvim'
+#alias vim='nvim'
 #Alias's for multiple directory listing commands
 #alias la='ls -Alh'                # show hidden files
 #alias ls='ls -aFh --color=always' # add colors and file type extensions
@@ -345,3 +349,5 @@ export PATH=$PATH:"$HOME/.local/bin:$HOME/.cargo/bin:/var/lib/flatpak/exports/bi
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+export LIBVIRT_DEFAULT_URI='qemu:///system'
+export LIBVIRT_DEFAULT_URI='qemu:///system'
