@@ -1,0 +1,18 @@
+font-family = "Iosevka Nerd Font"
+font-size = 12
+
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+background = #000000
+foreground = #ffffff
+background-opacity = 0.85
+
+cursor-style = block
+cursor-style-blink = false
+
+window-padding-x = 8
+window-padding-y = 8
+
+resize-overlay = never
